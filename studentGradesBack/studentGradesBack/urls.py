@@ -1,9 +1,7 @@
-# studentGradesBack/studentGradesBack/urls.py
-
 from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('studentgradesapp/', include('studentgradesapp.urls')),
+    path('api/studentgradesapp/', include('studentgradesapp.urls')),  # Prefix with 'api/'
 ]
