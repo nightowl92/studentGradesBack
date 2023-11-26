@@ -39,6 +39,8 @@ MIDDLEWARE = [
 	'django.contrib.messages.middleware.MessageMiddleware',
 	'django.middleware.clickjacking.XFrameOptionsMiddleware',
 	'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'studentGradesBack.urls'
@@ -71,6 +73,15 @@ DATABASES = {
 		'NAME': BASE_DIR / 'db.sqlite3',
 	}
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:4200",
+    "http://localhost:8000",
+    "http://127.0.0.1:4200",
+    "http://127.0.0.1:8000",
+    "http://47.94.96.123",
+    "https://47.94.96.123",
+]
 
 
 # Password validation
